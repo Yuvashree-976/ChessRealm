@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 8%;
+    --foreground: 40 20% 92%;
+
+    --card: 222 40% 12%;
+    --card-foreground: 40 20% 92%;
+
+    --popover: 222 40% 12%;
+    --popover-foreground: 40 20% 92%;
+
+    --primary: 43 72% 55%;
+    --primary-foreground: 222 47% 8%;
+
+    --secondary: 222 30% 18%;
+    --secondary-foreground: 40 20% 92%;
+
+    --muted: 222 25% 16%;
+    --muted-foreground: 220 15% 55%;
+
+    --accent: 265 40% 35%;
+    --accent-foreground: 40 20% 92%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 25% 20%;
+    --input: 222 25% 20%;
+    --ring: 43 72% 55%;
+
+    --radius: 0.5rem;
+
+    --gold: 43 72% 55%;
+    --gold-light: 43 80% 70%;
+    --gold-dark: 43 60% 40%;
+    --navy: 222 47% 8%;
+    --navy-light: 222 40% 15%;
+    --royal-purple: 265 40% 25%;
+    --board-light: 37 30% 75%;
+    --board-dark: 222 25% 35%;
+    --board-highlight: 43 72% 55%;
+    --board-move: 120 50% 40%;
+
+    --sidebar-background: 222 47% 6%;
+    --sidebar-foreground: 40 20% 85%;
+    --sidebar-primary: 43 72% 55%;
+    --sidebar-primary-foreground: 222 47% 8%;
+    --sidebar-accent: 222 30% 14%;
+    --sidebar-accent-foreground: 40 20% 92%;
+    --sidebar-border: 222 25% 15%;
+    --sidebar-ring: 43 72% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-gold-gradient {
+    background: linear-gradient(135deg, hsl(43 80% 70%), hsl(43 72% 55%), hsl(43 60% 40%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .bg-royal-gradient {
+    background: linear-gradient(135deg, hsl(222 47% 8%), hsl(265 40% 15%), hsl(222 47% 8%));
+  }
+  .border-gold {
+    border-color: hsl(43 72% 55%);
+  }
+  .glow-gold {
+    box-shadow: 0 0 20px hsl(43 72% 55% / 0.15), 0 0 60px hsl(43 72% 55% / 0.05);
+  }
+}
